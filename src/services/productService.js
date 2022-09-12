@@ -2,7 +2,7 @@ import { fetchAPI } from "../components/FetchAPI";
 
 const fetchProduct = (data = {}) => {
     const query = new URLSearchParams(data)
-    return fetchAPI("http://localhost/api/articles?" + query)
+    return fetchAPI("https://admin-tor.herokuapp.com/api/articles?" + query)
         .then((data) => {
             return data;
         })
@@ -12,7 +12,7 @@ const fetchProduct = (data = {}) => {
 }
 
 const fetchProductDetail = (paramId) => {
-    return fetchAPI("http://localhost/api/articles/" + paramId)
+    return fetchAPI("https://admin-tor.herokuapp.com/api/articles/" + paramId)
         .then((data) => {
             return data;
         })
@@ -23,7 +23,7 @@ const fetchProductDetail = (paramId) => {
 }
 
 const fetchCategories = () => {
-    return fetchAPI("http://localhost/api/categories/")
+    return fetchAPI("https://admin-tor.herokuapp.com/api/categories/")
         .then((data) => {
             return data;
         })
@@ -33,7 +33,7 @@ const fetchCategories = () => {
 }
 
 const fetchTags = () => {
-    return fetchAPI("http://localhost/api/tags/")
+    return fetchAPI("https://admin-tor.herokuapp.com/api/tags/")
         .then((data) => {
             return data;
         })
@@ -43,7 +43,7 @@ const fetchTags = () => {
 }
 
 const fetchGetArticleByTags = (paramId) => {
-    return fetchAPI("http://localhost/api/tags/" + paramId)
+    return fetchAPI("https://admin-tor.herokuapp.com/api/tags/" + paramId)
         .then((data) => {
             return data;
         })
@@ -53,7 +53,7 @@ const fetchGetArticleByTags = (paramId) => {
 }
 
 const fetchGetArticleByCategories = (paramId) => {
-    return fetchAPI("http://localhost/api/categories/" + paramId)
+    return fetchAPI("https://admin-tor.herokuapp.com/api/categories/" + paramId)
         .then((data) => {
             return data;
         })

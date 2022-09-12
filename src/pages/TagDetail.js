@@ -37,10 +37,9 @@ function TagDetail() {
                   tags ?
                   tags.articles.map((art, index) => {
                     return (
-                      art.publish === 1 ?
                         <Grid sm={4}>
                           <ProductCard productProp={art} key={index}></ProductCard>
-                        </Grid> : null
+                        </Grid>
                     )
                   }) : <h2>Tag not found</h2>
                 }

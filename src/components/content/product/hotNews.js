@@ -1,7 +1,6 @@
-import { Container, Grid, Typography } from '@mui/material';
+import { Grid } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { fetchProduct } from '../../../services/productService';
-import ProductCard from '../../products/productCard';
 import MiniNews from './miniNews';
 
 
@@ -16,33 +15,18 @@ function HotNews() {
     article[0] ?
       <Grid container paddingTop={10} paddingBottom={5}>
         <Grid sm={6}>
-          <div style={{
-            position: "relative",
-          }}>
+          <div className='fh5co_suceefh5co_height_2'>
+            <img style={{ width: '100%', height: "404px" }}
+              src={"https://admin-project-image.s3.ap-southeast-1.amazonaws.com/" + article[0].image} />
+            <div class="fh5co_suceefh5co_height_position_absolute"></div>
+            <div class="fh5co_suceefh5co_height_position_absolute_font_2"></div>
             <div>
-              <a style={{
-                position: "absolute",
-                top: "70%",
-                left: "10%",
-                color: 'white',
-                fontSize: '25px',
-                fontWeight: '600',
-                textDecoration: "none",
-                maxWidth: '100%',
-                maxHeight: '115px',
-                display: '-webkit-box',
-                WebkitBoxOrient: 'vertical',
-                WebkitLineClamp: 2,
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-                paddingRight: "10px"
-              }}
+              <a className="format-hotnews fh5co_good_font_2"
                 href={"/article/" + article[0].id}
               >
                 {article[0].caption}
               </a>
             </div>
-            <img style={{ width: '100%', height: "404px" }} src={article[0].image}></img>
           </div>
         </Grid>
         <Grid sm={6}>

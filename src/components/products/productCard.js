@@ -1,14 +1,9 @@
-import { ConstructionOutlined } from '@mui/icons-material';
 import { Grid, Card, CardActionArea, CardContent } from '@mui/material';
 import Typography from '@mui/material/Typography';
 
 function ProductCard({ productProp }) {
     function getUrl(value) {
-        var pattern = new RegExp('/^http(s)*\:\/\/[a-zA-Z0-9\-_\.]+\//i');
-        if (/https:/.test(value)) {
-            return value;
-        }
-        return "http://localhost/storage/" + value;
+        return "https://admin-project-image.s3.ap-southeast-1.amazonaws.com/" + value;
     }
     return (
         <Grid textAlign="center" mb={2} padding={1} sx={{ height: "100%", alignSelf: "end", textAlign: "center" }}>

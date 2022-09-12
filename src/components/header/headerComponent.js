@@ -1,4 +1,4 @@
-import { AppBar, Button, Toolbar, Grid, Typography, Menu, MenuItem, TextField } from '@mui/material';
+import { AppBar, Button, Toolbar, Grid, Typography, Menu, MenuItem } from '@mui/material';
 import React, { useState, useEffect } from 'react';
 import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
 import { fetchCategories } from '../../services/productService';

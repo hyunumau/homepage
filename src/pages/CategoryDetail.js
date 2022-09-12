@@ -15,6 +15,7 @@ function CategoryDetail() {
   useEffect(() => {
     loaded || fetchGetArticleByCategories(id).then(data => {
       setCategory(data);
+      console.log(data);
       setLoaded(true)
     })
   }, [loaded])
@@ -37,10 +38,9 @@ function CategoryDetail() {
                   category ?
                   category.articles.map((art, index) => {
                     return (
-                      art.publish === 1 ?
                         <Grid sm={4}>
                           <ProductCard productProp={art} key={index}></ProductCard>
-                        </Grid> : null
+                        </Grid>
                     )
                   }) : <h2>Category not found</h2>
                 }
